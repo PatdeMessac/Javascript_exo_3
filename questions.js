@@ -1,3 +1,7 @@
+
+//  http://www.w3schools.com/js/js_array_methods.asp
+
+
 //Créer un tableau "langages" contenant "Html", "CSS", "Java", "PHP"'
 function CreationTableauLangages(){
 	return (langages) = ["Html", "CSS", "Java", "PHP"];
@@ -32,4 +36,114 @@ function CreationTableauLangages(){
       function AjoutElementLangages(langages){
       	langages.splice(4,0, "Ruby", "Python");
     return langages;
+}
+
+//Ajouter "-2" et "-1" au début du tableau nombres', function () {
+     //var nombres = [0,1,2,3,4,5];
+    //  var nombres = AjoutElementNombres(nombres);::::::::::::::: arr.unshift([élém1[, ...[, élémN]]])
+     // expect(nombres).toEqual([-2,-1,0,1,2,3,4,5]);
+ function AjoutElementNombres(nombres) {
+    	return nombres.unshift(-2,-1);
+    }
+
+
+    //Supprimer le premier élément du tableau langages', function () {
+      //var langages = ['Html', 'CSS', 'Javascript', 'PHP', 'Ruby', 'Python'];
+      //var langages = SuppressionPremierElement(langages);
+      //expect(langages).toEqual(['CSS', 'Javascript', 'PHP', 'Ruby', 'Python']);
+function SuppressionPremierElement(langages) {
+    	return langages.shift(0,4,'');
+    }
+
+
+    //Supprimer le dernier élément du tableau langages', function () {
+    //  var langages = ['CSS', 'Javascript', 'PHP', 'Ruby', 'Python'];
+     // var langages = SuppressionDernierElement(langages);
+     // expect(langages).toEqual(['CSS', 'Javascript', 'PHP', 'Ruby']);
+     function SuppressionDernierElement(langages){
+     	return langages.pop();
+     }
+
+//'Faire de la chaîne "reseaux_sociaux_chaine" un tableau "reseaux_sociaux"', function () 
+    //  var reseaux_sociaux_chaine = 'Facebook,Twitter,Google +,Viadeo,LinkedIn';
+    //  var reseaux_sociaux = ConversionChaineTableau(reseaux_sociaux_chaine);
+    //  expect(reseaux_sociaux).toEqual(['Facebook','Twitter', 'Google +','Viadeo','LinkedIn']);
+
+    //The split() method is used to split a string into an array of substrings, and returns the new array.
+     function ConversionChaineTableau(reseaux_sociaux_chaine){
+    reseaux_sociaux = reseaux_sociaux_chaine.split();
+    return reseaux_sociaux;
+ }
+
+ //Faire du tableau "langages" une chaîne "langages_chaine". Séparer les langages par une virgule', function () {
+  //    var langages = ['CSS', 'Javascript', 'PHP', 'Ruby'];
+   //   var langages_chaine = ConversionTableauChaine(langages);
+    //  expect(langages_chaine).toEqual("CSS,Javascript,PHP,Ruby");
+function ConversionTableauChaine (langages){
+langages_chaine = langages.push("");
+return langages_chaine;
+}
+
+//Trier le tableau "reseaux_sociaux"', function () {
+     // var reseaux_sociaux = ['Facebook','Twitter', 'Google +','Viadeo','LinkedIn'];
+    //  var reseaux_sociaux = TriTableau(reseaux_sociaux);
+    //  expect(reseaux_sociaux).toEqual(['Facebook','Google +','LinkedIn','Twitter','Viadeo']);
+
+//		var items = ["réservé", "premier", "cliché", "communiqué", "café" ,"adieu"];
+//			items.sort(function (a, b) {
+  //  		return a.localeCompare(b);
+//			});
+
+// items is [ 'adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé' ]
+
+function TriTableau(reseaux_sociaux) {
+	return reseaux_sociaux.sort();
+}
+
+
+//BONUS
+//it('Inverser le tableau "langages"', function () {
+    //  var langages = ['CSS','Javascript','PHP','Ruby'];
+    //  var langages = InversionTableau(langages);
+    //  expect(langages).toEqual(["Ruby", "PHP", "Javascript", "CSS"]);
+
+    //fruits.reverse();
+function InversionTableau (langages){
+return langages.reverse();
+}
+
+
+
+
+
+    //it('Ordonnez le tableau "languages" en fonction du nombre de caractères présents dans la chaine' function(){
+     // var languages = ['C#','Javascript','PHP','Ruby'];
+    //  var languages = TriSpecial(languages);
+    //  expect(languages).toEqual(["C#", "PHP", "Ruby", "Javascript"]);
+
+//Comparing string properties is a little more complex:
+
+//cars.sort(function(a, b){
+    //var x = a.type.toLowerCase();
+    //var y = b.type.toLowerCase();
+    //if (x < y) {return -1;}
+   // if (x > y) {return 1;}
+   // return 0;
+//});
+
+
+
+function TriSpecial(languages){
+	result = languages.sort(function(a, b){
+		var x = a.length;
+		var y = b.length;
+		if (x < y) {
+			return -1;
+		}
+		if (x > y) {
+			return 1;
+		}
+		//return 0;
+	});
+	return result;
 }
