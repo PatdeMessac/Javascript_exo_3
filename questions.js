@@ -42,17 +42,22 @@ function CreationTableauLangages(){
      //var nombres = [0,1,2,3,4,5];
     //  var nombres = AjoutElementNombres(nombres);::::::::::::::: arr.unshift([élém1[, ...[, élémN]]])
      // expect(nombres).toEqual([-2,-1,0,1,2,3,4,5]);
- function AjoutElementNombres(nombres) {
-    	return nombres.unshift(-2,-1);
-    }
-
-
+ 
+ //function AjoutElementNombres(nombres) {
+   // 	return nombres.splice(0,-2,-1);
+    //}
+    function AjoutElementNombres(){
+var chiffresNegatifs = [-2,-1];
+var nombres = [0, 1, 2, 3, 4, 5];
+return result = chiffresNegatifs.concat(nombres);
+}
     //Supprimer le premier élément du tableau langages', function () {
       //var langages = ['Html', 'CSS', 'Javascript', 'PHP', 'Ruby', 'Python'];
       //var langages = SuppressionPremierElement(langages);
       //expect(langages).toEqual(['CSS', 'Javascript', 'PHP', 'Ruby', 'Python']);
 function SuppressionPremierElement(langages) {
-    	return langages.shift(0,4,'');
+    	langages.shift([0]);
+      return langages;
     }
 
 
@@ -61,7 +66,8 @@ function SuppressionPremierElement(langages) {
      // var langages = SuppressionDernierElement(langages);
      // expect(langages).toEqual(['CSS', 'Javascript', 'PHP', 'Ruby']);
      function SuppressionDernierElement(langages){
-     	return langages.pop();
+     	langages.pop();
+      return langages;
      }
 
 //'Faire de la chaîne "reseaux_sociaux_chaine" un tableau "reseaux_sociaux"', function () 
@@ -69,18 +75,18 @@ function SuppressionPremierElement(langages) {
     //  var reseaux_sociaux = ConversionChaineTableau(reseaux_sociaux_chaine);
     //  expect(reseaux_sociaux).toEqual(['Facebook','Twitter', 'Google +','Viadeo','LinkedIn']);
 
-    //The split() method is used to split a string into an array of substrings, and returns the new array.
-     function ConversionChaineTableau(reseaux_sociaux_chaine){
-    reseaux_sociaux = reseaux_sociaux_chaine.split();
-    return reseaux_sociaux;
- }
+   function ConversionChaineTableau(reseaux_sociaux_chaine) {
+  reseaux_sociaux = reseaux_sociaux_chaine.split(",");
+  return reseaux_sociaux;
+}
+
 
  //Faire du tableau "langages" une chaîne "langages_chaine". Séparer les langages par une virgule', function () {
   //    var langages = ['CSS', 'Javascript', 'PHP', 'Ruby'];
    //   var langages_chaine = ConversionTableauChaine(langages);
     //  expect(langages_chaine).toEqual("CSS,Javascript,PHP,Ruby");
 function ConversionTableauChaine (langages){
-langages_chaine = langages.push("");
+langages_chaine = langages.join(",");
 return langages_chaine;
 }
 

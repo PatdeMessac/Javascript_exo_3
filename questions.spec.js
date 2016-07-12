@@ -56,8 +56,8 @@ describe("", function() {
   
   it('Ordonnez le tableau "languages" en fonction du nombre de caractères présents dans la chaine', function(){
       var languages = ['C#','Javascript','PHP','Ruby'];
-      var langages = TriSpecial(languages);
-      expect(langages).toEqual(["C#", "PHP", "Ruby", "Javascript"]);
+      var languages = TriSpecial(languages);
+      expect(languages).toEqual(["C#", "PHP", "Ruby", "Javascript"]);
   });
 
 });
